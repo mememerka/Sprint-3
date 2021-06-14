@@ -1,0 +1,46 @@
+
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main{
+    background-color: #2f5d62;
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+    height: 600px;
+    border-radius: 25px;
+}
+    .container{
+        display: flex;
+        background-color: #5e8b7e;
+        flex-flow: column;
+        flex: 1 1;
+        border-radius: 25px;
+    }
+        .article{
+            display: flex;
+            background-color: #a7c4bc;
+            flex: 1 1;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+        }
+            
+            .btn{
+                font-size: 25px;
+                height: 70px;
+                width: 190px;
+                background-color: #dfeeea;
+                border-radius: 25px;
+                border: none;
+                font-family: 'Bebas Neue', cursive;
+            }
+
+            .btn:hover{
+                font-size: 28px;
+                cursor: pointer;
+            }
+                
+           

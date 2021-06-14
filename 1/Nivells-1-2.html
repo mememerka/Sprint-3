@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* NIVELL 1 */
+
+        /*Exercici 1*/
+        console.log("Hola mundo");
+
+        /*Exercici 2*/
+        alert ("Oriol Mercader");
+
+
+        /*Exercici 3*/
+        let nom = "Oriol";
+        let cognom = "Mercader";
+        console.log(nom+" "+cognom);
+
+        /*Exercici 4*/
+        let num1 = 2;
+        let num2 = 4;
+        console.log("La suma dels dos nombres és "+num1+num2);
+
+
+        /*Exercici 5*/
+        var dades = false
+
+        do{
+            var nota_examen = prompt("Introdueix la nota de l'examen");
+                if (isNaN(nota_examen)==true){
+                    alert("Introdueix valors numerics");
+                }else if(nota_examen>10||nota_examen<0){
+                    alert("Introdueix un número de l'1 al 10");
+                }else{
+                    dades = true;
+                }
+        }while(dades==false)
+
+        if(dades = true){
+            if(nota_examen<5){
+                alert("Has suspès amb una nota de "+nota_examen);
+            }else{
+                alert("Enhorabona! Has aprobat amb una nota de "+nota_examen);
+            }
+        }
+
+
+        /*Exercici 6*/
+        let frase = "Tinc un cotxe de color blau.";
+        let frasemod = frase.replace("blau", "verd");
+        console.log(frasemod);
+
+        let frasemod2 = frase.replace(/o/g,"u");
+        console.log(frasemod2);
+
+
+        /*Exercici 7*/
+        let items = ["taula","cadira","ordinador","llibreta"];
+        
+        for (i=0; i<items.length; i++){
+                console.log("L'objecte "+items[i]+" està en la posició "+i+".");
+        }
+        
+
+        /*Exercicis 8 i 9*/
+        elements = false;
+
+        do{
+            var valor1 = parseFloat(prompt("Introdueix un número"));
+            var valor2 = parseFloat(prompt("Introdueix un número"));
+            var preoperador = prompt ("Quina operació vols fer? (+, -, x, /)");
+            var operador = preoperador.toLowerCase()
+            if(isNaN(valor1)==true||isNaN(valor2)==true){
+                alert("Introdueix valors numèrics!");
+            }else{
+                if(operador == "+" || operador == "-"||operador=="X"||operador == "/"){
+                    elements = true;
+                }else{
+                    alert("operador incorrecte");
+                }
+            }
+        }while(elements==false);
+
+        if (elements = true){
+            var resultat = calculadora (operador,valor1,valor2);
+
+            function calculadora (operador,valor1,valor2){
+                switch (operador){
+                    case "+":
+                        resultat = valor1 + valor2;
+                        break;
+                    case "-":
+                        resultat = valor1 - valor2;
+                        break;
+                    case "x":
+                        resultat = valor1 * valor2;
+                        break;
+                    case "/":
+                    if(valor2 == 0){
+                            alert ("ERROR p.e.3/0")
+                        }else{
+                            resultat = valor1 / valor2;
+                        }
+                        break;
+                }
+                alert(resultat);;
+            }
+        }
+
+    </script>
+</body>
+</html>
